@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-multicontainer
+spec:
+  containers:
+    - name: app-container1
+      image: your-image1:tag1
+      # Container 1 configuration
+
+    - name: app-container2
+      image: your-image2:tag2
+  volumes:
+    - name: shared-data
+      emptyDir: {}
